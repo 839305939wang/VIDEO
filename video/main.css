@@ -1,0 +1,159 @@
+.CB {
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
+  background: palevioletred;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center;*/
+}
+.XS {
+  position: absolute;
+  top: 1px;
+  width: 100%;
+  background: dodgerblue;
+}
+.Video {
+  position: relative;
+  border: 2px solid lightgoldenrodyellow;
+  box-shadow: 5px 5px 5px 5px slategrey;
+  margin: 0 auto;
+  overflow: hidden;
+  background: dodgerblue;
+}
+.SP {
+  width: 30px;
+  height: 30px;
+  background: beige;
+  margin-right: 5px;
+  line-height: 30px;
+  text-align: center;
+}
+.PRO {
+  width: 400px;
+  height: 20px;
+  background: whitesmoke;
+  border-radius: 7px;
+  margin-right: 5px;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+}
+.VO {
+  width: 30px;
+  height: 30px;
+  background: beige;
+  margin-right: 5px;
+  line-height: 30px;
+  text-align: center;
+}
+.SC {
+  width: 30px;
+  height: 30px;
+  background: beige;
+  line-height: 30px;
+  text-align: center;
+}
+.come-enter .come-appear {
+  bottom: -50px;
+  opacity: 0;
+  transition: all 2s linear;
+}
+.come-enter.active {
+  bottom: 1px;
+  opacity: 1;
+}
+.come-appear-active {
+  bottom: 1px;
+  opacity: 1;
+}
+.come-leave {
+  bottom: 1px;
+  opacity: 1;
+}
+.come-leave-active {
+  bottom: -50px;
+  opacity: 0;
+}
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    bottom: -50px;
+    /*transform: perspective(1000px) rotate3d(1,0,0,45deg);*/
+  }
+  100% {
+    opacity: 1;
+    bottom: 1px;
+    /*transform: perspective(1000px) rotate3d(1,0,0,0deg);*/
+  }
+}
+@keyframes flipOut {
+  0% {
+    opacity: 1;
+    bottom: 1px;
+    /*transform: perspective(1000px) rotate3d(1,0,0,0deg);*/
+  }
+  100% {
+    opacity: 0;
+    bottom: -50px;
+    /*  transform: perspective(1000px) rotate3d(1,0,0,45deg);*/
+  }
+}
+.custom-enter,
+.custom-appear {
+  opacity: 0;
+  /*transform: perspective(1000px) rotate3d(1,0,0,45deg);
+  transform-origin: 50% calc(100% + 10px);*/
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.custom-enter-active,
+.custom-appear-active {
+  animation-name: flipIn;
+}
+.custom-leave {
+  opacity: 1;
+  /*transform: perspective(1000px) rotate3d(1,0,0,0deg);*/
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.custom-leave-active {
+  animation-name: flipOut;
+}
+#processBar {
+  height: 28px;
+  width: 35px;
+  background: navajowhite;
+  display: inline-block;
+  margin-top: -4px;
+  position: absolute;
+  left: 0px;
+  border-radius: 3px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "\9ED1\4F53";
+  cursor: pointer;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+.xs-message {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 250px;
+  font-weight: bolder;
+  text-align: center;
+  background: rgba(100, 100, 200, 0.5);
+}
